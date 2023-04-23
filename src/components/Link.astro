@@ -1,0 +1,20 @@
+---
+export interface Props {
+  href: string;
+  title: string;
+  isMail?: boolean;
+  styles?: string;
+}
+
+const { href, title, isMail, styles } = Astro.props as Props;
+
+const linkProps = !isMail
+  ? { target: "_blank", rel: "noopener noreferrer" }
+  : {};
+---
+
+<div
+  class={`ease-out duration-500 mx-2 ${styles} font-medium text-lg !leading-3 hover:text-[#ffef00] hover:text-xl`}
+>
+  <a type="nav" {...linkProps} href={href}>{title}</a>
+</div>

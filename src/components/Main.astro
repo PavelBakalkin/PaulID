@@ -1,0 +1,41 @@
+<main class="m-8 flex-auto lg:my-36">
+  <div class="flex flex-col mx-auto max-w-screen-2xl items-center lg:flex-row">
+    <div class="w-full p-5 lg:w-2/5 lg:p-0">
+      <h1 data-animBio="desc" class="pointer-events-none">
+        <span class="font-bold text-3xl mb-4 inline-block sm:text-5xl">
+          My name is Paul
+        </span>
+        <br />
+        <span class="font-medium text-2xl inline-block"
+          >Here's some text about me...</span
+        >
+      </h1>
+    </div>
+    <div
+      data-animBio="desc"
+      class="w-full p-5 text-base font-medium sm:text-lg lg:w-3/5 lg:p-0"
+    >
+      <p>
+        I'm a 23-year-old front-end developer from Odessa, Ukraine who loves a
+        good challenge.
+      </p>
+      <p>
+        I enjoy creating interactive web applications that are both convenient
+        and user-friendly.
+      </p>
+      <p>Let's work together to build something amazing!</p>
+    </div>
+  </div>
+</main>
+
+<script>
+  import anime from "animejs";
+  anime.set('[data-animBio="desc"]', { opacity: 0, translateX: "-10%" });
+
+  anime({
+    targets: '[data-animBio="desc"]',
+    translateX: 0,
+    opacity: 1,
+    easing: "spring()",
+  });
+</script>

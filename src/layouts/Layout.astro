@@ -1,0 +1,50 @@
+---
+const title = "PaulId";
+const description =
+  "My name is Paul Bakalkin. Front-end developer from Odessa, Ukraine";
+const coverImg = "";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={coverImg} />
+    <meta name="author" content="Paul Bakalkin" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"
+    ></script>
+  </head>
+  <body>
+    <slot />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto Mono", monospace;
+        color: #fff;
+      }
+
+      html,
+      body {
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+    </style>
+  </body>
+</html>

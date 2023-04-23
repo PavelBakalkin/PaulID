@@ -1,0 +1,36 @@
+---
+import { DownloadCV } from "../components-react/DownloadCV";
+---
+
+<footer class="m-8 p-5">
+  <div class="mx-auto max-w-screen-2xl">
+    <div
+      data-animBio="getCv"
+      class="flex flex-col my-4 lg:flex-row lg:items-center"
+    >
+      <p class="text-base font-medium sm:text-lg">
+        Here you can download my resume to see all the information about me:
+      </p>
+      <DownloadCV client:load />
+    </div>
+    <p
+      data-animBio="getCv"
+      class="bg-ukraine flex h-12 max-w-[18rem] items-center font-semibold text-2xl text-[#ffef00] pointer-events-none !leading-3"
+    >
+      STAY WITH
+      <span class="text-blue-800">&#160UKRAINE</span>
+  </p>
+  </div>
+</footer>
+
+<script>
+  import anime from "animejs";
+  anime.set('[data-animBio="getCv"]', { opacity: 0, translateY: "-2rem" });
+
+  anime({
+    targets: '[data-animBio="getCv"]',
+    translateY: 0,
+    opacity: 1,
+    easing: "spring()",
+  });
+</script>
