@@ -1,5 +1,9 @@
+---
+import { TypewriterComp } from "../components-react/TypewriterComp";
+---
+
 <main class="m-8 flex-auto lg:my-36">
-  <div class="flex flex-col mx-auto max-w-screen-2xl items-center lg:flex-row">
+  <div class="flex flex-col mx-auto max-w-screen-2xl lg:flex-row">
     <div class="w-full p-5 lg:w-2/5 lg:p-0">
       <h1 data-animBio="desc" class="pointer-events-none">
         <span class="font-bold text-3xl mb-4 inline-block sm:text-5xl">
@@ -13,17 +17,12 @@
     </div>
     <div
       data-animBio="desc"
-      class="w-full p-5 text-base font-medium sm:text-lg lg:w-3/5 lg:p-0"
+      class="w-full p-5 text-base font-medium min-h-[19rem] sm:text-lg sm:min-h-[11.25rem] lg:min-h-fit lg:w-3/5 lg:p-0"
     >
-      <p>
-        I'm a 23-year-old front-end developer from Odessa, Ukraine who loves a
-        good challenge.
-      </p>
-      <p>
-        I enjoy creating interactive web applications that are both convenient
-        and user-friendly.
-      </p>
-      <p>Let's work together to build something amazing!</p>
+      <TypewriterComp
+        client:load
+        text="I'm a 23-year-old front-end developer from Odessa, Ukraine who loves a good challenge. <br/> I enjoy creating interactive web applications that are both convenient and user-friendly. <br/> Let's work together to build something amazing!"
+      />
     </div>
   </div>
 </main>
